@@ -1,0 +1,51 @@
+{
+  "name": "angular-dfo",
+  "private": true,
+  "version": "0.0.0",
+  "description": "DFOAPP",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "1.8.x",
+    "angular-animate": "1.8.x",
+    "angular-resource": "1.8.x",
+    "angular-route": "1.8.x",
+    "bootstrap": "3.3.x",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^2.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "gulp-util": "^3.0.8",
+    "jquery": "3.3.x"
+  },
+  "devDependencies": {
+    "angular-mocks": "1.8.x",
+    "cpx": "^1.5.0",
+    "gulp": "^4.0.2",
+    "gulp-build": "^0.5.3",
+    "gulp-bytediff": "^1.0.0",
+    "gulp-rename": "^2.0.0",
+    "http-server": "^0.11.1",
+    "jasmine-core": "^3.5.0",
+    "karma": "^3.1.4",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-firefox-launcher": "^1.3.0",
+    "karma-jasmine": "^1.1.2",
+    "protractor": "^5.4.4"
+  },
+  "scripts": {
+    "postinstall": "npm run copy-libs",
+    "update-deps": "npm update",
+    "postupdate-deps": "npm run copy-libs",
+    "copy-libs": "cpx \"node_modules/{angular,angular-*,bootstrap/dist,jquery/dist}/**/*\" app/lib -C",
+    "prestart": "npm install",
+    "start": "http-server ./app -a localhost -p 8000 -c-1",
+    "pretest": "npm install",
+    "test": "karma start karma.conf.js",
+    "test-single-run": "npm test -- --single-run",
+    "preupdate-webdriver": "npm install",
+    "update-webdriver": "webdriver-manager update",
+    "preprotractor": "npm run update-webdriver",
+    "protractor": "protractor e2e-tests/protractor.conf.js"
+  }
+}

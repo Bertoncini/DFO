@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" ng-app="dfoApp">
+  <head>
+    <meta charset="utf-8">
+    <title>DFO Test</title>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="app.css" />
+
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-animate/angular-animate.js"></script>
+    <script src="lib/angular-resource/angular-resource.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+    <script src="app.module.js"></script>
+    <script src="app.config.js"></script>
+    <script src="core/core.module.js"></script>
+    <script src="core/user/user.module.js"></script>
+    <script src="core/user/user.service.js"></script>
+    <script src="user-list/user-list.module.js"></script>
+    <script src="user-list/user-list.component.js"></script>
+    <script src="user-detail/user-detail.module.js"></script>
+    <script src="user-detail/user-detail.component.js"></script>
+  </head>
+  <body>
+
+    <div class="view-container">
+      <div ng-view class="view-frame"></div>
+    </div>
+
+  </body>
+</html>

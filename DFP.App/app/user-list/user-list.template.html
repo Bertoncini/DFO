@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <!--Sidebar content-->
+
+      <p>
+        Search:
+        <input ng-model="$ctrl.query" />
+      </p>
+
+      <p>
+        <a href="#!/users/0">
+        <span>New User</span>
+      </a>
+    </p>
+
+    </div>
+
+    <div class="col-md-10">
+      <!--Body content-->
+
+      <div ng-repeat="user in $ctrl.users | filter:$ctrl.query " class="users">
+        <div class="user">
+          <a href="#!/users/{{user.id}}">
+            <p>Name: {{user.name}}</p>
+            <p>Age: {{user.age}}</p>
+            <p>Address: {{user.address}}</p>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>

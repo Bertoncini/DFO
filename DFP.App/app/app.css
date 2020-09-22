@@ -1,0 +1,31 @@
+body {
+  padding: 20px;
+}
+
+h1 {
+  border-bottom: 1px solid gray;
+  margin-top: 0;
+}
+
+/* View: User list */
+.users {
+  list-style: none;
+}
+
+.users .user {
+  clear: both;
+  height: 115px;
+  padding-top: 15px;
+}
+
+/* View: User detail */
+.detail .user {
+  background-color: white;
+  display: block;
+  float: left;
+  height: 400px;
+  margin-bottom: 2em;
+  margin-right: 3em;
+  padding: 2em;
+  width: 400px;
+}
